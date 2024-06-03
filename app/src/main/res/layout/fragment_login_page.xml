@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Screens.LoginPage">
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/vk_logo"
+        android:layout_marginStart="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-50dp"
+            android:layout_below="@id/company_logo"
+            android:elevation="6dp"
+            android:background="@drawable/login_back"
+            android:gravity="top"
+            android:orientation="vertical">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="30dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/login_anim" />
+
+            <EditText
+                android:id="@+id/mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_edittext_back"
+                android:drawableEnd="@drawable/phone"
+                android:elevation="6dp"
+                android:fontFamily="@font/roboto"
+                android:hint="Mobile number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:letterSpacing="0.1"
+                android:paddingEnd="12dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#616161"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_edittext_back"
+                android:drawableEnd="@drawable/password"
+                android:elevation="6dp"
+                android:fontFamily="@font/roboto"
+                android:hint="Code"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:letterSpacing="0.1"
+                android:paddingStart="15dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="#616161"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/login_button_back"
+                android:backgroundTint="@color/blue"
+                android:elevation="6dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:text="Login" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="Get Code from Admin, if not known"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/verify_otp_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/login_button_back"
+                android:backgroundTint="@color/blue"
+                android:elevation="6dp"
+                android:visibility="gone"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:text="Verify" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resend_otp_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/login_button_back"
+                android:backgroundTint="@color/gray_500"
+                android:visibility="gone"
+                android:elevation="6dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:text="Resend OTP" />
+
+            <TextView
+                android:id="@+id/register_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_med"
+                android:text="@string/dont_have_a"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+</RelativeLayout>

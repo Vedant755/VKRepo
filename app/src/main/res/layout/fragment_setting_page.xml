@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Screens.SettingPage">
+
+    <Switch
+        android:id="@+id/offlineSearchCB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:fontFamily="@font/poppins_med"
+        android:minHeight="48dp"
+        android:text="Offline Search"
+        android:textColor="@color/dark_1"
+        android:textSize="16sp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/twoColumnCB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/offlineSearchCB"
+        android:layout_marginHorizontal="20dp"
+        android:checked="false"
+        android:fontFamily="@font/poppins_med"
+        android:textColor="@color/dark_1"
+        android:minHeight="48dp"
+        android:text="Two column vehicle list"
+        android:textSize="16sp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/searchChassisNumberCB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/twoColumnCB"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="4dp"
+        android:checked="false"
+        android:fontFamily="@font/poppins_med"
+        android:minHeight="48dp"
+        android:text="Search By Chassis Number"
+        android:textColor="@color/dark_1"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="16sp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+</RelativeLayout>

@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Screens.CustomButtonDetail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_med"
+                android:text="Information"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/Loan_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Loan No"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Loan_no_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Cust. name"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cust_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/branch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Branch"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/branch_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/vehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Vehicle No"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assitant"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/vehicle_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/model"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Model no"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assitant"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/model_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/chassis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Chassis no"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="-"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/chassis_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="asfsdafasdfg"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_200" />
+
+            <EditText
+                android:id="@+id/vehicle_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle address"
+                android:padding="15dp"
+                android:textColorHint="@color/gray_500" />
+
+            <EditText
+                android:id="@+id/carries_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carries good"
+                android:padding="15dp"
+                android:textColorHint="@color/gray_500" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_med"
+                android:text="SEND SMS TO"
+                android:textSize="17sp" />
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/mainn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+                <TextView
+                    android:id="@+id/key"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Level1 (Excel)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/level1_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/level1_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Level2 (Excel)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/level2_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/level2_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Level3 (Excel)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/level3_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/level3_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Level4 (Excel)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/level4_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/level4_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Contact person1 (Finance/Branch)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <CheckBox
+                    android:id="@+id/checkBox_contact1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/contact1_value"
+                android:autoLink="phone"
+                android:layout_marginStart="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Contact person2 (Finance/Branch)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <CheckBox
+                    android:id="@+id/checkBox_contact2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/contact2_value"
+                android:layout_marginStart="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:autoLink="phone"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp">
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.35"
+                    android:fontFamily="@font/assitant"
+                    android:text="Contact person3 (Finance/Branch)"
+                    android:textColor="@color/dark_3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <CheckBox
+                    android:id="@+id/checkBox_contact3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:buttonTint="@color/dark_3" />
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/contact3_value"
+                android:autoLink="phone"
+                android:layout_marginStart="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:fontFamily="@font/opensans_bold"
+                android:text="asfsdafasdfg"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/user_bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="2dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/user_whatsapp_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#33691E"
+                android:fontFamily="@font/poppins_med"
+                android:text="Whatsapp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/message_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#D47E25"
+                android:fontFamily="@font/poppins_med"
+                android:text="SMS"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

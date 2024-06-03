@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Screens.SearchVehiclePage">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <ImageView
+                android:id="@+id/error_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/not_found"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Something went wrong"
+                android:textColor="@color/dark_3"
+                android:textSize="16sp"
+                android:visibility="gone" />
+<!--            <LinearLayout-->
+<!--                android:id="@+id/main_content"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="right"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="1.0">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/itemTxt"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/fira_sans_bold"-->
+<!--                    android:paddingVertical="5dp"-->
+<!--                    android:paddingStart="15dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="UP-57-AK-5464"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:src="@drawable/next_icon"-->
+<!--                    android:layout_marginEnd="10dp" />-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

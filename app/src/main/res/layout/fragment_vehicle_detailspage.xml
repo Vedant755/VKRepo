@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".Screens.VehicleDetailsPage">
+
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:src="@drawable/license_plate"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/heading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Details for MH08AB0930"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/showCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_centerHorizontal="false"
+        android:text="Show selection box"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/assitant"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/showCheckBox"
+        android:layout_marginBottom="65dp"
+        android:overScrollMode="never"
+        android:visibility="visible" />
+        <ImageView
+            android:id="@+id/error_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/not_found"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/error_image"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+
+            android:text="Something went wrong"
+            android:textColor="@color/dark_3"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/user_bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="2dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/user_whatsapp_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#33691E"
+                android:fontFamily="@font/poppins_med"
+                android:text="Whatsapp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/user_copy_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#D47E25"
+                android:fontFamily="@font/poppins_med"
+                android:text="Copy"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/admin_bottom_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="2dp"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:id="@+id/admin_confirm_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/confirm_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Confirm"
+                    android:textColor="@color/dark_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/admin__whatsapp_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/whatsapp_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Whatsapp"
+                    android:textColor="@color/dark_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/admin_ok_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ok_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Ok Repo"
+                    android:textColor="@color/dark_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/admin_cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/cancel_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Cancel"
+                    android:textColor="@color/dark_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/admin_copy_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/copy_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Copy"
+                    android:textColor="@color/dark_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>

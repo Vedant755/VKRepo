@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafbff"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/top_homebg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/arrow_back" />
+
+            <ImageView
+                android:id="@+id/changeType"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/arrows" />
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/searchhhh"
+                android:drawableStart="@drawable/search"
+                android:drawableRight="@drawable/download"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:maxLength="5"
+                android:hint="Search anything..."
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColor="#9aa2aa"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_collapseMode="pin" />
+    <ImageView
+                android:id="@+id/download"
+                android:layout_width="30dp"
+                android:visibility="invisible"
+                android:layout_height="30dp"
+                android:layout_marginStart="-85dp"
+                android:src="@drawable/download" />
+
+            <ImageView
+                android:layout_marginStart="15dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/setting"
+                android:src="@drawable/edit"/>
+        </LinearLayout>
+
+
+    <FrameLayout
+        android:nestedScrollingEnabled="true"
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_below="@id/topBar"
+        />
+    <LinearLayout
+        android:layout_below="@id/topBar"
+        android:id="@+id/setting_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="80dp">
+
+        <Switch
+            android:visibility="gone"
+            android:id="@+id/offlineSearchCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:checked="false"
+            android:fontFamily="@font/poppins_med"
+            android:minHeight="48dp"
+            android:text="Offline Search"
+            android:textColor="@color/dark_1"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/twoColumnCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:checked="false"
+            android:fontFamily="@font/poppins_med"
+            android:minHeight="48dp"
+            android:text="Two column list"
+            android:textColor="@color/dark_1"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/searchChassisNumberCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:checked="false"
+            android:fontFamily="@font/poppins_med"
+            android:minHeight="48dp"
+            android:text="Search By Chassis Number"
+            android:textColor="@color/dark_1"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+</RelativeLayout>

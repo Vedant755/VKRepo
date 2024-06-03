@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fafbff"
+    tools:context=".Screens.DashboardPage">
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VK Enterprises"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+        <com.github.dangiashish.StyledCardView
+            android:layout_width="0dp"
+            android:id="@+id/planExpiry"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            app:background_Type="fill_stroke"
+            app:cornerRadius="10dp"
+            app:corner_Type="rectangular"
+            app:shadow0_Outer_Alpha="0.6"
+            app:shadow0_Outer_Angle="-45"
+            app:shadow0_Outer_Blur="10dp"
+            app:shadow0_Outer_Distance="10dp"
+            app:shadow1_Outer_Alpha="0.6"
+            app:shadow1_Outer_Angle="135"
+            app:shadow1_Outer_Blur="10dp"
+            app:shadow1_Outer_Distance="10dp"
+            app:background_Color="#fafbff"
+            app:shadow0_Outer_Color="#fafbff"
+            app:shadow1_Outer_Color="#fafbff"
+            app:shadow_Outer_Area="10dp">
+            <LinearLayout
+                android:background="@drawable/s2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/schedule"/>
+
+                <TextView
+                    android:id="@+id/b1"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Plan Expiry\n (No plan if Admin)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.github.dangiashish.StyledCardView>
+        <com.github.dangiashish.StyledCardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            app:background_Type="fill_stroke"
+            app:cornerRadius="10dp"
+            app:corner_Type="rectangular"
+            app:shadow0_Outer_Alpha="0.6"
+            app:shadow0_Outer_Angle="-45"
+            app:shadow0_Outer_Blur="10dp"
+            app:shadow0_Outer_Distance="10dp"
+            app:shadow1_Outer_Alpha="0.6"
+            app:shadow1_Outer_Angle="135"
+            app:shadow1_Outer_Blur="10dp"
+            app:shadow1_Outer_Distance="10dp"
+            app:background_Color="#fafbff"
+            app:shadow0_Outer_Color="#fafbff"
+            app:shadow1_Outer_Color="#fafbff"
+            app:shadow_Outer_Area="10dp">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/s2"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/folder"/>
+                <Button
+                    android:id="@+id/b2"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Offline Records\n (Coming Soon)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.github.dangiashish.StyledCardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+        <com.github.dangiashish.StyledCardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            app:background_Type="fill_stroke"
+            app:cornerRadius="10dp"
+            app:corner_Type="rectangular"
+            app:shadow0_Outer_Alpha="0.6"
+            app:shadow0_Outer_Angle="-45"
+            app:shadow0_Outer_Blur="10dp"
+            app:shadow0_Outer_Distance="10dp"
+            app:shadow1_Outer_Alpha="0.6"
+            app:shadow1_Outer_Angle="135"
+            app:shadow1_Outer_Blur="10dp"
+            app:shadow1_Outer_Distance="10dp"
+            app:background_Color="#fafbff"
+            app:shadow0_Outer_Color="#fafbff"
+            app:shadow1_Outer_Color="#fafbff"
+            app:shadow_Outer_Area="10dp">
+            <LinearLayout
+                android:background="@drawable/s2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/exchange"/>
+                <Button
+                    android:id="@+id/b3"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Active\n Subscription"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.github.dangiashish.StyledCardView>
+        <com.github.dangiashish.StyledCardView
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            app:background_Type="fill_stroke"
+            app:cornerRadius="10dp"
+            app:corner_Type="rectangular"
+            app:shadow0_Outer_Alpha="0.6"
+            app:shadow0_Outer_Angle="-45"
+            app:shadow0_Outer_Blur="10dp"
+            app:shadow0_Outer_Distance="10dp"
+            app:shadow1_Outer_Alpha="0.6"
+            app:shadow1_Outer_Angle="135"
+            app:shadow1_Outer_Blur="10dp"
+            app:shadow1_Outer_Distance="10dp"
+            app:background_Color="#fafbff"
+            app:shadow0_Outer_Color="#fafbff"
+            app:shadow1_Outer_Color="#fafbff"
+            app:shadow_Outer_Area="10dp">
+            <LinearLayout
+                android:background="@drawable/s2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/user"/>
+                <Button
+                    android:id="@+id/b4"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="My\n Account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.github.dangiashish.StyledCardView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/adminLL"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="1.0">
+        <com.github.dangiashish.StyledCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="center"
+            app:background_Type="fill_stroke"
+            app:cornerRadius="10dp"
+            app:corner_Type="rectangular"
+            app:shadow0_Outer_Alpha="0.6"
+            app:shadow0_Outer_Angle="-45"
+            app:shadow0_Outer_Blur="10dp"
+            app:shadow0_Outer_Distance="10dp"
+            app:shadow1_Outer_Alpha="0.6"
+            app:shadow1_Outer_Angle="135"
+            app:shadow1_Outer_Blur="10dp"
+            app:shadow1_Outer_Distance="10dp"
+            app:background_Color="#fafbff"
+            app:shadow0_Outer_Color="#fafbff"
+            app:shadow1_Outer_Color="#fafbff"
+            app:shadow_Outer_Area="10dp">
+            <LinearLayout
+                android:background="@drawable/s2"                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/user_2"/>
+                <Button
+                    android:id="@+id/admin"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Admin\n"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.github.dangiashish.StyledCardView>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:autoLink="phone"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Developed by 5TechG Team \n 5TechG.com \n \n VK Enterprises: +9191127 00080"/>
+
+
+
+</LinearLayout>

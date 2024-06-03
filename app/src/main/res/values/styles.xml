@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ImageViewIcon">
+        <item name="android:tint">@color/yellow</item> <!-- Change "your_tint_color" to your desired color -->
+        <item name="android:scaleType">centerInside</item> <!-- Adjust scaleType as needed -->
+        <!-- Add more style attributes here if needed -->
+    </style>
+
+</resources>

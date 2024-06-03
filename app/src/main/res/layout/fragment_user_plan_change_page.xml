@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Screens.UserPlanChangePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:civ_border_color="@color/gray_500"
+                android:scaleType="centerCrop"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:id="@+id/main_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/login_edittext_back"
+                android:layout_below="@id/userImage"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACCOUNT INFORMATION"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_med"
+                    android:textColor="@color/gray_500"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Name"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Registered Mobile"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Address"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Access From"
+                            android:textColor="@color/gray_500"
+                            android:fontFamily="@font/poppins_med"
+                            android:layout_marginStart="15dp"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/access_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_3"
+                            android:fontFamily="@font/poppins_med"
+                            android:layout_marginStart="15dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Access To"
+                            android:textColor="@color/gray_500"
+                            android:fontFamily="@font/poppins_med"
+                            android:layout_marginStart="15dp"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:id="@+id/access_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_3"
+                            android:fontFamily="@font/poppins_med"
+                            android:layout_marginStart="15dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+
+                <Switch
+                    android:id="@+id/status_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="Active"
+                    android:layout_marginVertical="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_3"
+                    android:fontFamily="@font/poppins_bold"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+                <Switch
+                    android:id="@+id/admin_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="Admin Rights"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_3"
+                    android:fontFamily="@font/poppins_bold"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/renew_date_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/main_details"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:weightSum="1.0">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/one_month"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/login_edittext_back"
+                    android:imeOptions="actionNext"
+                    android:textColor="#FFFFFF"
+                    android:text="1+ Month"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:backgroundTint="#1B5E20"
+                    android:fontFamily="@font/poppins_bold"/>
+                <EditText
+                    android:id="@+id/custom"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/login_edittext_back"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/dark_3"
+                    android:textColorHint="@color/darker_gray"
+                    android:hint="Days"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_bold"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/expire"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/login_edittext_back"
+                    android:imeOptions="actionNext"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="15dp"
+                    android:text="Expire"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:backgroundTint="@color/alert"
+                    android:fontFamily="@font/poppins_bold"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/renew_date_layout1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/s4"
+                android:backgroundTint="#277B71"
+                android:fontFamily="@font/poppins_bold"
+                android:textAllCaps="false"
+                android:text="Choose Plan"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

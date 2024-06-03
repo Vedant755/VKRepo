@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Screens.AccountPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:elevation="3dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:civ_border_color="@color/gray_500"
+                android:scaleType="centerCrop"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:id="@+id/main_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:elevation="3dp"
+                android:layout_below="@id/userImage"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Name"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Registered Mobile"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Address"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray_500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Plan Expiry"
+                    android:textColor="@color/gray_500"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_med"
+                    android:layout_marginStart="15dp"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_account_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/main_details"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_edittext_back"
+                android:backgroundTint="@color/gray_200"
+                android:drawableEnd="@drawable/baseline_arrow_forward_ios_24"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="10dp"
+                android:visibility="gone"
+                android:text="Update Account"
+                android:textColor="@color/gray_700"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logout_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/update_account_button"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="Logout"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:paddingEnd="10dp"
+                android:backgroundTint="@color/alert"
+                android:background="@drawable/login_edittext_back"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

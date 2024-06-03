@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardCornerRadius="6dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1.0">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:singleLine="true"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="start"
+            android:textColor="@color/dark_3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_mobile"
+            android:layout_marginEnd="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/poppins_med"
+            android:singleLine="true"
+            android:textColor="@color/dark_3"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/user_admin"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:scaleType="fitCenter"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:src="@drawable/admin"
+            android:fontFamily="@font/poppins_med"
+            android:singleLine="true"
+            android:layout_marginEnd="2dp"
+            android:textColor="@color/dark_3"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/user_active"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:scaleType="fitCenter"
+            android:gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:src="@drawable/check"
+            android:fontFamily="@font/poppins_med"
+            android:singleLine="true"
+            android:textColor="@color/dark_3"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
