@@ -286,16 +286,16 @@
             </LinearLayout>
         </com.github.dangiashish.StyledCardView>
     </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:autoLink="phone"
         android:fontFamily="@font/poppins_bold"
+        android:text="Developed by 5TechG Team \n 5TechG.com \n \n For purchase contact no. 8177989603"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:text="Developed by 5TechG Team \n 5TechG.com \n \n VK Enterprises: +9191127 00080"/>
-
+        android:textSize="18sp" />
 
 
 </LinearLayout>
