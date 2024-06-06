@@ -42,6 +42,9 @@ class SearchAdapter(
         }
 
         holder.NumberTV.text = if(searchByRc) {
+            try {
+
+
             val rcNo = vehicle?.rc_no
 
             if (rcNo != null && rcNo.length == 8 && rcNo.matches(Regex("[A-Za-z]{2}[0-9]{6}"))) {
@@ -84,6 +87,8 @@ class SearchAdapter(
                 }.apply {
                     insert(8, '-')
                 }.toString()
+            }}catch (e:Exception){
+                vehicle.rc_no
             }
         }else{
             vehicle.chassis_no

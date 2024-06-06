@@ -206,11 +206,12 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
                 call: Call<VehicleAdminDetailsResponse>,
                 response: Response<VehicleAdminDetailsResponse>
             ) {
-
+                Log.d("RESPN",response.code().toString())
                 if (response.code() == 200) {
-                    ListvehicleDetails = response.body()!!.data.vehicles
-                    ListBranchDetails = response.body()!!.data.branches
-                    loadBottomSheet(response.body()!!.data.branches)
+
+                    ListvehicleDetails = response.body()!!.data!!.vehicles
+                    ListBranchDetails = response.body()!!.data!!.branches
+                    loadBottomSheet(response.body()!!.data!!.branches)
                 }else{
                     Log.d("Errorrrr",response.code().toString())
                     bind.rcv.visibility = View.GONE
@@ -226,6 +227,7 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
             }
 
             override fun onFailure(call: Call<VehicleAdminDetailsResponse>, t: Throwable) {
+                Toast.makeText(requireContext(),"It's dummy data",Toast.LENGTH_SHORT).show()
             }
 
         })
@@ -236,8 +238,13 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
         dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
         dialog.setContentView(dialogView)
         recyclerView = dialogView.findViewById(R.id.rvItem)
-        recyclerView.adapter = ItemAdapter(ListBranchDetail, this@VehicleDetailsPage)
-        dialog.show()
+        if (ListBranchDetail!=null){
+            recyclerView.adapter = ItemAdapter(ListBranchDetail, this@VehicleDetailsPage)
+            dialog.show()
+
+        }else{
+
+        }
     }
 
     override fun onBranchChange(item: Branch) {

@@ -46,70 +46,7 @@ class SearchVehiclePage : Fragment() {
             Log.d("Result",result.toString())
             val count = result?.size
 
-            if (count != null) {
-                if (((count % 2) == 1) && viewModel.isTwoColumn){
-                    bind.mainContent.visibility=View.VISIBLE
-                    bind.itemTxt.text = if (viewModel.searchByRc) {
-                        val rcNo = result.lastOrNull()?.rc_no
-
-                        when {
-                            rcNo != null && rcNo.length == 8 && rcNo.matches(Regex("[A-Za-z]{2}[0-9]{6}")) -> {
-                                StringBuilder(rcNo).apply {
-                                    insert(2, '-')
-                                }.apply {
-                                    insert(5, '-')
-                                }.toString()
-                            }
-                            rcNo != null && rcNo.length == 11 -> {
-                                StringBuilder(rcNo).apply {
-                                    insert(2, '-')
-                                }.apply {
-                                    insert(5, '-')
-                                }.apply {
-                                    insert(9, '-')
-                                }.toString()
-                            }
-                            rcNo != null && rcNo.length == 9 -> {
-                                StringBuilder(rcNo).apply {
-                                    insert(2, '-')
-                                }.apply {
-                                    insert(5, '-')
-                                }.apply {
-                                    insert(7, '-')
-                                }.toString()
-                            }
-                            rcNo != null && rcNo.length == 10 -> {
-                                StringBuilder(rcNo).apply {
-                                    insert(2, '-')
-                                }.apply {
-                                    insert(5, '-')
-                                }.apply {
-                                    insert(8, '-')
-                                }.toString()
-                            }
-                            else -> {
-                                rcNo?.let {
-                                    StringBuilder(it).apply {
-                                        insert(2, '-')
-                                    }.apply {
-                                        insert(5, '-')
-                                    }.apply {
-                                        insert(8, '-')
-                                    }.toString()
-                                }
-                            }
-                        }
-                    } else {
-                        result.lastOrNull()?.chassis_no
-                    }
-                    bind.mainContent.setOnClickListener {
-                        result.lastOrNull()?.let { it1 -> showVehicleDetails(it1) }
-                    }
-                }else{
-                    bind.mainContent.visibility=View.GONE
-
-                }
-            }
+            Log.d("RESULT_COUNT",count.toString())
 
             if (result.isNullOrEmpty() || memory.getUserDetails().status == "IN-ACTIVE") {
                 bind.rcv.visibility = View.GONE

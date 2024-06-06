@@ -1,7 +1,7 @@
 package com.ftg.carrepo.Models
 
 data class VehicleAdminDetailsResponse(
-    val data: VehicleAdminDetailsResponseData
+    val data: VehicleAdminDetailsResponseData?
 )
 data class VehicleAdminDetailsResponseData(
     val branch_id: List<String>,

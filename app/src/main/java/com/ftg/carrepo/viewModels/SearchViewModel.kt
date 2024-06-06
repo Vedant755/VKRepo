@@ -53,7 +53,7 @@ class SearchViewModel @Inject constructor(
     private val scope = CoroutineScope(Dispatchers.IO + job)
 
     private val _searchResult = MutableLiveData<List<SearchedVehicleDetails>?>()
-    val searchResult: MutableLiveData<List<SearchedVehicleDetails>?> = _searchResult
+    var searchResult: MutableLiveData<List<SearchedVehicleDetails>?> = _searchResult
     lateinit var status: String
 
     fun initialize(arguments: Bundle?, context: Context) {
@@ -122,9 +122,9 @@ class SearchViewModel @Inject constructor(
                 }
             } else {
                 searchOnServerCall = if (searchByRc)
-                    server.searchVehicle(SearchVehicleData(query, "rc_no",1,100000000))
+                    server.searchVehicle(SearchVehicleData(query, "rc_no",1,5000))
                 else
-                    server.searchVehicle(SearchVehicleData(query, "chassis_no",1,100000000))
+                    server.searchVehicle(SearchVehicleData(query, "chassis_no",1,5000))
 
                 searchOnServerCall.enqueue(object : Callback<SearchVehicleResponse> {
                     override fun onResponse(
@@ -134,7 +134,10 @@ class SearchViewModel @Inject constructor(
                         if (response.isSuccessful) {
                             var result = response.body()?.data
                             if (!result.isNullOrEmpty()) {
-                                val distinctResult = result.distinctBy { it.rc_no }
+                                val distinctResult = result.distinctBy { it.rc_no }.toMutableList()
+                                if (distinctResult.size % 2 != 0) {
+                                    distinctResult.add(createDummyElement()) // Add a dummy element
+                                }
                                 _searchResult.postValue(distinctResult)
                             } else {
                                 _searchResult.postValue(emptyList())
@@ -150,6 +153,16 @@ class SearchViewModel @Inject constructor(
                 })
             }
         }
+    }
+    private fun createDummyElement(): SearchedVehicleDetails {
+        // Create and return a dummy element
+        return SearchedVehicleDetails(
+            _id = " ",
+            mek_and_model = " ",
+            rc_no = " ",
+            chassis_no = " ",
+            // Add other necessary fields here
+        )
     }
 
     fun searchAdminVehicle(context: Context) {
@@ -170,9 +183,9 @@ class SearchViewModel @Inject constructor(
             }
         } else {
             searchOnServerCall = if (searchByRc)
-                server.searchAdminVehicle(SearchAdminVehicleData(query, "rc_no", 1,100000000))
+                server.searchAdminVehicle(SearchAdminVehicleData(query, "rc_no", 1,5000))
             else
-                server.searchAdminVehicle(SearchAdminVehicleData(query, "chassis_no", 1,100000000))
+                server.searchAdminVehicle(SearchAdminVehicleData(query, "chassis_no", 1,5000))
 
             searchOnServerCall.enqueue(object : Callback<SearchVehicleResponse> {
                 override fun onResponse(
@@ -182,7 +195,10 @@ class SearchViewModel @Inject constructor(
                     if (response.isSuccessful) {
                         val result = response.body()?.data
                         if (!result.isNullOrEmpty()) {
-                            val distinctResult = result.distinctBy { it.rc_no }
+                            val distinctResult = result.distinctBy { it.rc_no }.toMutableList()
+                            if (distinctResult.size % 2 != 0) {
+                                distinctResult.add(createDummyElement()) // Add a dummy element
+                            }
                             _searchResult.postValue(distinctResult)
                         } else {
                             _searchResult.postValue(emptyList())

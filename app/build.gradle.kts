@@ -14,8 +14,8 @@ android {
         applicationId = "com.ftg.carrepo"
         minSdk = 26
         targetSdk = 34
-        versionCode = 51
-        versionName = "v1.0.17"
+        versionCode = 56
+        versionName = "v1.0.22"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
