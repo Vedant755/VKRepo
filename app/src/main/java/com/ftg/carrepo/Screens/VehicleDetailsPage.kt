@@ -82,7 +82,7 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
     private var contact1name: String = " "
     private var contact2name: String = " "
     private var contact3name: String = " "
-
+    private var createdAt: String = " "
     private var type: Int = 1
     private var searchOffline: Boolean = false
     private var vehicleDetailsForAdapter: MutableList<LinkedHashMap<String, String>> =
@@ -211,7 +211,8 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
 
                     ListvehicleDetails = response.body()!!.data!!.vehicles
                     ListBranchDetails = response.body()!!.data!!.branches
-                    loadBottomSheet(response.body()!!.data!!.branches)
+                    loadBottomSheet(response.body()!!.data!!.branches,response.body()!!.data!!.vehicles)
+
                 }else{
                     Log.d("Errorrrr",response.code().toString())
                     bind.rcv.visibility = View.GONE
@@ -233,13 +234,13 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
         })
     }
 
-    private fun loadBottomSheet(ListBranchDetail: List<Branch>) {
+    private fun loadBottomSheet(ListBranchDetail: List<Branch>,ListVehicleDetail: List<VehicleDetails>) {
         val dialogView = layoutInflater.inflate(R.layout.bottom_sheet, null)
         dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialogTheme)
         dialog.setContentView(dialogView)
         recyclerView = dialogView.findViewById(R.id.rvItem)
         if (ListBranchDetail!=null){
-            recyclerView.adapter = ItemAdapter(ListBranchDetail, this@VehicleDetailsPage)
+            recyclerView.adapter = ItemAdapter(ListBranchDetail, ListVehicleDetail,this@VehicleDetailsPage)
             dialog.show()
 
         }else{
@@ -274,6 +275,15 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
         contact1name = requestItem.contact_one.name
         contact2name = requestItem.contact_two.name
         contact3name = requestItem.contact_three.name
+        createdAt = try {
+            val parsed: ZonedDateTime = ZonedDateTime.parse(requestItem.createdAt)
+            val z: ZonedDateTime = parsed.withZoneSameInstant(ZoneId.of("Asia/Kolkata"))
+            val fmt = DateTimeFormatter.ofPattern("dd MMM, yyyy", Locale.ENGLISH)
+            fmt.format(z)
+        }catch (e:Exception){
+            requestItem.createdAt
+        }
+
         buildDetails(details!!)
         adapter = DetailsAdapter(
             vehicleDetailsForAdapter,
@@ -598,7 +608,6 @@ class VehicleDetailsPage : Fragment(), ItemAdapter.ItemChangeListener, DetailsAd
                     buildDetailsMap("Level 3con", level3cont)
                 }
             } catch (e: NullPointerException) {
-                // Handle if level3 is null
                 buildDetailsMap("Level 3", " ")
                 buildDetailsMap("Level 3con", it.level3con ?: " ")
             }
